@@ -8,7 +8,7 @@ const SearchPage = () => {
 
   const handleSearch = async () => {
     if (query.trim() !== '') {
-      const response = await axios.get(`http://localhost:5001/search`, { params: { query } });
+      const response = await axios.get(`https://book-search-backend-production-de33.up.railway.app/search`, { params: { query } });
       setResults(response.data);
     }
   };
