@@ -11,12 +11,10 @@ body {
   }
   
   .app-container {
-    width: 80%;
-    max-width: 800px;
-    margin: auto;
+    margin: 0px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     height: 80vh;
@@ -24,9 +22,10 @@ body {
   }
   
   .container {
-    padding: 20px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
+    max-width: 900px;
     height: 100%;
   }
   
@@ -34,7 +33,6 @@ body {
     position: sticky;
     top: 0;
     background: #fff;
-    z-index: 1000;
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -42,7 +40,7 @@ body {
   }
   
   .search-bar input {
-    width: 80%;
+    width: 70%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ddd;
@@ -68,6 +66,7 @@ body {
     flex: 1;
     overflow-y: auto;
     margin-top: 20px;
+    height: auto;
   }
   
   .results {

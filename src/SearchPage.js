@@ -31,7 +31,7 @@ const SearchPage = () => {
               <h3>{book.title}</h3>
               <p>{book.author}</p>
               <a href={book.link} target="_blank" rel="noopener noreferrer">
-                View
+                View 
               </a>
             </li>
           ))}
