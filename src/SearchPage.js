@@ -30,7 +30,7 @@ const SearchPage = () => {
             <li key={index} className="result-item">
               <h3>{book.title}</h3>
               <p>{book.author}</p>
-              <a href={book.link} target="_blank" rel="noopener noreferrer">
+              <a href={book.link} target="_blank" rel="noopener noreferrer" className='View'>
                 View 
               </a>
             </li>
