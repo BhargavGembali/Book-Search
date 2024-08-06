@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+#LIVE APP
+link: https://booksbay.vercel.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Book Search Web Application
+
+This project is a web application that allows users to search for books and get links to download them. The backend is built with Express.js and Axios, and the frontend is created using Create React App.
 
 ## Available Scripts
 
@@ -8,8 +11,8 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the backend server in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view the React frontend in your browser and access the backend at the specified endpoint.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
@@ -45,26 +48,28 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Backend Explanation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The backend of this application is built using Express.js. It provides an API endpoint to search for books on Archive.org and returns the results in a structured format.
 
-### Analyzing the Bundle Size
+### `GET /search`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This endpoint allows users to search for books based on a query parameter.
 
-### Making a Progressive Web App
+#### Request Parameters
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `query`: The search term for the books.
 
-### Advanced Configuration
+#### Response
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The response is a JSON array of book objects, each containing the following fields:
+- `title`: The title of the book.
+- `author`: The author of the book (or 'Unknown' if not available).
+- `publishYear`: The year the book was published.
+- `link`: A link to the book on Archive.org.
+- `cover`: A link to the book's cover image.
 
-### Deployment
+### Example
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To search for books related to "javascript", you can make a request to:
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
