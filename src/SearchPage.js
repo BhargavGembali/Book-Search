@@ -41,21 +41,25 @@ const SearchPage = () => {
           onChange={handleChange}
           placeholder="Search by book titles..."
         />
-        <button onClick={() => handleSearch(query)}>Search</button>
       </div>
       {error && <p className="error-message">{error}</p>}
       <div className="results-container">
-        <ul className="results">
-          {results.map((book, index) => (
-            <li key={index} className="result-item">
-              <h3>{book.title}</h3>
-              <p>{book.author}</p>
-              <a href={book.link} target="_blank" rel="noopener noreferrer" className="View">
-                View
-              </a>
-            </li>
-          ))}
-        </ul>
+        {results.length === 0 && !error ? (
+          <p className='prompt-message'>Search For Books!</p>
+        ) : (
+          <ul className="results">
+            {results.map((book, index) => (
+              <li key={index} className="result-item">
+                <img src={book.cover} alt={`Cover of ${book.title}`} className="book-cover" />
+                <h3>{book.title}</h3>
+                <p>{book.author}</p>
+                <a href={book.link} target="_blank" rel="noopener noreferrer" className="View">
+                  View
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );
