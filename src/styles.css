@@ -98,7 +98,7 @@ body {
 
 .results-container {
   flex: 1;
-  overflow-y: auto;
+  overflow-y:hidden;
   margin-top: 20px;
   padding: 10px;
   background-color: #fff;
@@ -165,6 +165,12 @@ body {
   background-color: #737373;
 }
 
+.View:active {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);
+  background-color: #737373;
+}
+
 @media (max-width: 768px) {
   .search-bar input {
     width: 65%;
@@ -188,5 +194,26 @@ body {
 @media (min-width: 415px) and (max-width: 720px) {
   .results {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .results {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for screen widths between 415px and 720px */
+  }
+}
+
+@media (max-width: 480px) {
+  .results {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusts automatically for smaller screens */
   }
 }
