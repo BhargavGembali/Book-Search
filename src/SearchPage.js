@@ -53,6 +53,7 @@ const SearchPage = () => {
                 <img src={book.cover} alt={`Cover of ${book.title}`} className="book-cover" />
                 <h3>{book.title}</h3>
                 <p>{book.author}</p>
+                {book.publishYear && <p>Published: {book.publishYear}</p>}
                 <a href={book.link} target="_blank" rel="noopener noreferrer" className="View">
                   View
                 </a>
