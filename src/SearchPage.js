@@ -11,7 +11,7 @@ const SearchPage = () => {
   const handleSearch = async (query) => {
     if (query.trim() !== '') {
       try {
-        const response = await axios.get('https://book-search-backend-ten.vercel.app/api/search', { params: { query } });
+        const response = await axios.get('https://book-search-backend-or04.onrender.com/search', { params: { query } });
         setResults(response.data);
         setError('');
       } catch (error) {
